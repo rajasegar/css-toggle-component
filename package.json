@@ -1,6 +1,6 @@
 {
   "name": "css-toggle-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pure CSS Toggle Web Component",
   "main": "index.js",
   "repository": "https://github.com/rajasegar/css-toggle-component",
