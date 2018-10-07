@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel public/index.html",
     "build": "parcel build public/index.html --public-url /css-toggle-component/",
-    "publish": "git version patch && git push && git push --tags && npm publish",
+    "deploy": "npm version patch && git push && git push --tags && npm publish",
     "publish-docs": "scripts/publish-docs"
   },
   "keywords": [
