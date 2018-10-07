@@ -1,8 +1,10 @@
 #!/bin/sh
 rm -Rf dist/*
 npm run build
+mkdir -p /tmp/css-toggle-component
+cp -R dist/* /tmp/css-toggle-component
 git checkout gh-pages
-cp -R dist/* ./
+cp -R /tmp/css-toggle-component/* ./
 git add .
 git commit -m "Publishing docs for $(git log -1 --pretty=%B)"
 git push origin gh-pages
