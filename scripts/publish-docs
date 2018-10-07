@@ -1,6 +1,6 @@
 #!/bin/sh
 rm -Rf dist/*
-ember build --env=production
+npm run build
 mkdir /tmp/css-toggle-component
 cp -R dist/* /tmp/css-toggle-component
 git checkout gh-pages
