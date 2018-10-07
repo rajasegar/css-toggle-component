@@ -1,4 +1,14 @@
-node_modules
-.swp
+# compiled output
+/tmp
+/dist
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+npm-debug.log*
+testem.log
+*.swp
 .cache
 .DS_Store
