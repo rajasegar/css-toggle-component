@@ -1,0 +1,4 @@
+node_modules
+.swp
+.cache
+.DS_Store
