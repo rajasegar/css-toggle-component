@@ -1,6 +1,8 @@
 [![npm version](http://img.shields.io/npm/v/ember-aria-slider.svg?style=flat)](https://npmjs.org/package/ember-aria-slider "View this project on npm")
 [![dependencies Status](https://david-dm.org/rajasegar/ember-aria-slider/status.svg)](https://david-dm.org/rajasegar/ember-aria-slider)
 [![devDependencies Status](https://david-dm.org/rajasegar/ember-aria-slider/dev-status.svg)](https://david-dm.org/rajasegar/ember-aria-slider?type=dev)
+
+
 #Pure CSS Toggle Web component
 Pure CSS Toggle Buttons - ON-OFF Switches
 
