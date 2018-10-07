@@ -4,9 +4,10 @@ npm run build
 mkdir /tmp/css-toggle-component
 cp -R dist/* /tmp/css-toggle-component
 git checkout gh-pages
-rm -Rf ./*
+rm -Rf public scripts
+rm README.MD index.js
 cp -R /tmp/css-toggle-component/* ./
 git add .
-git commit -m "Publishing docs for $(git describe --tags)"
+git commit -m "Publishing docs for $(git log -1 --pretty=%B)"
 git push origin gh-pages
 git checkout master
