@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel public/index.html",
-    "build": "parcel build index.js"
+    "build": "parcel build public/index.html",
+    "publish-docs": "scripts/deploy.sh"
   },
   "keywords": [
     "csstoggle",
@@ -19,6 +20,7 @@
     "babel-plugin-transform-custom-element-classes": "^0.1.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "cssnano": "^4.1.4"
   }
 }

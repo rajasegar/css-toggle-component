@@ -1,0 +1,12 @@
+#!/bin/sh
+rm -Rf dist/*
+ember build --env=production
+mkdir /tmp/css-toggle-component
+cp -R dist/* /tmp/css-toggle-component
+git checkout gh-pages
+rm -Rf ./*
+cp -R /tmp/css-toggle-component/* ./
+git add .
+git commit -m "Publishing docs for $(git describe --tags)"
+git push origin gh-pages
+git checkout master
