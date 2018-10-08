@@ -6,7 +6,9 @@
 # Pure CSS Toggle Web component
 Pure CSS Toggle Buttons - ON-OFF Switches
 
-7 different style effects to choose from
+- 11 different style effects to choose from
+- Keyboard Accessible (You can able to toggle using Space keys)
+- Screenreader discoverability
 
 ## Install
 npm install css-toggle-component
@@ -32,8 +34,17 @@ Pass on any one of the following values for different toggle effects to `theme` 
  - rotate
  - fadeout
  - slideall
+ - rect-slide
+ - rect-flip
+ - rect-move
+ - rect-hide
 
-
+## Things to do
+- Bring focus to the component when using Tab keys for navigation
+- Provide option to pass on aria-label
+- Tests
+- Refactoring and code cleanup
+- And much more...
 
 
 ## Credits
