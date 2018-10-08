@@ -1,10 +1,12 @@
-[![npm version](http://img.shields.io/npm/v/ember-aria-slider.svg?style=flat)](https://npmjs.org/package/ember-aria-slider "View this project on npm")
-[![dependencies Status](https://david-dm.org/rajasegar/ember-aria-slider/status.svg)](https://david-dm.org/rajasegar/ember-aria-slider)
-[![devDependencies Status](https://david-dm.org/rajasegar/ember-aria-slider/dev-status.svg)](https://david-dm.org/rajasegar/ember-aria-slider?type=dev)
+[![npm version](http://img.shields.io/npm/v/css-toggle-component.svg?style=flat)](https://npmjs.org/package/css-toggle-component "View this project on npm")
+[![dependencies Status](https://david-dm.org/rajasegar/css-toggle-component/status.svg)](https://david-dm.org/rajasegar/css-toggle-component)
+[![devDependencies Status](https://david-dm.org/rajasegar/css-toggle-component/dev-status.svg)](https://david-dm.org/rajasegar/css-toggle-component?type=dev)
 
 
-#Pure CSS Toggle Web component
+# Pure CSS Toggle Web component
 Pure CSS Toggle Buttons - ON-OFF Switches
+
+7 different style effects to choose from
 
 ## Install
 npm install css-toggle-component
@@ -19,6 +21,20 @@ https://rajasegar.github.io/css-toggle-component
 <css-toggle theme="move"></css-toggle>
 <css-toggle on-label="YES" off-label="NO"></css-toggle>
 ```
+
+## Themes
+Pass on any one of the following values for different toggle effects to `theme` property.
+
+ - slide
+ - move
+ - updown
+ - flip
+ - rotate
+ - fadeout
+ - slideall
+
+
+
 
 ## Credits
 https://codepen.io/himalayasingh/pen/EdVzNL?editors=1000
