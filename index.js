@@ -3,15 +3,6 @@
 
   const addSpan = ["flip", "fadeout", "slideall"];
 
-  const templateWithSpan = `     
-  <div class="button b2" role="switch" aria-label="CSS Toggle Button" aria-checked="true">
-          <input type="checkbox" class="checkbox" aria-label="CSS Toggle Button">
-          <div class="knobs">
-            <span></span>
-          </div>
-          <div class="layer"></div>
-        </div>
-  `;
   const template = document.createElement("template");
   const commonStyles = `
 .button
