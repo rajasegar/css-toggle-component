@@ -1,5 +1,6 @@
 (function() {
   const rectangleStyles = ["rect-slide", "rect-flip", "rect-move", "rect-hide"];
+
   const addSpan = ["flip", "fadeout", "slideall"];
 
   const templateWithSpan = `     
