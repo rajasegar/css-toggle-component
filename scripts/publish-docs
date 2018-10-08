@@ -1,10 +1,23 @@
 #!/bin/sh
+# Clean up dist directory
 rm -Rf dist/
+
+# Create production build
 npm run build
+
+# Clean up /tmp
 rm -Rf /tmp/css-toggle-component
 mkdir -p /tmp/css-toggle-component
+
+# Copy files to /tmp
 cp -R dist/* /tmp/css-toggle-component
+
+# Switch to gh-pages
 git checkout gh-pages
+
+# Cleanup old files
+rm css-toggle.*.js  styles.*.css *.map
+
 cp -R /tmp/css-toggle-component/* ./
 git add .
 git commit -m "Publishing docs for $(git log -1 --pretty=%B)"
