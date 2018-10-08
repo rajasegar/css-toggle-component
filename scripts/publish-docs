@@ -1,6 +1,7 @@
 #!/bin/sh
 rm -Rf dist/
 npm run build
+rm -Rf /tmp/css-toggle-component
 mkdir -p /tmp/css-toggle-component
 cp -R dist/* /tmp/css-toggle-component
 git checkout gh-pages
