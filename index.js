@@ -1,9 +1,20 @@
 (function() {
-  const rectangleStyles = ["rect-slide", "rect-flip", "rect-move", "rect-hide"];
+  const rectangleStyles = [
+    "rect-slide",
+    "rect-flip",
+    "rect-move",
+    "rect-hide",
+    "rect-updown",
+    "rect-zoomin",
+    "rect-slide2",
+    "rect-slide3",
+    "rect-slide4"
+  ];
 
   const addSpan = ["flip", "fadeout", "slideall"];
 
   const template = document.createElement("template");
+
   const commonStyles = `
 .button
 {
@@ -717,6 +728,304 @@ transform: scale(4);
 }
 
 .rect-hide .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+/* Rectangle Updown  */
+.rect-updown .knobs:before, .rect-updown .knobs:after, .rect-updown .knobs span:before, .rect-updown .knobs span:after
+{
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    border-radius: 2px;
+    transition: 0.3s ease all;
+}
+
+.rect-updown .knobs:before, .rect-updown .knobs:after
+{
+    color: #4e4e4e;
+    z-index: 1;
+}
+
+.rect-updown .knobs:before
+{
+    content: attr(data-yes);
+    left: 4px;
+}
+
+.rect-updown .knobs:after
+{
+    content: attr(data-no);
+    right: 4px;
+}
+
+.rect-updown .knobs span
+{
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rect-updown .knobs span:before
+{
+    left: 4px;
+    top: -28px;
+    background-color: #F44336;
+}
+
+.rect-updown .knobs span:after
+{
+    top: 4px;
+    left: 39px;
+    background-color: #03A9F4;
+}
+
+.rect-updown .knobs span:before, .rect-updown .knobs span:after
+{
+    content: '';
+    width: 23px;
+    z-index: 2;
+}
+
+.rect-updown .checkbox:checked + .knobs span:before
+{
+    top: 4px;
+}
+
+.rect-updown .checkbox:checked + .knobs span:after
+{
+    top: -28px;
+}
+
+.rect-updown .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+/* Rectangle Zoom-in */
+.rect-zoomin .knobs:before, .rect-zoomin .knobs:after
+{
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    opacity: 1;
+    border-radius: 2px;
+    transform: scale(1);
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+.rect-zoomin .knobs:before
+{
+    content: attr(data-yes);
+    left: 4px;
+    background-color: #03A9F4;
+}
+
+.rect-zoomin .knobs:after
+{
+    content: attr(data-no);
+    right: 4px;
+    opacity: 0;
+    transform: scale(4);
+    background-color: #F44336;
+}
+
+.rect-zoomin .checkbox:checked + .knobs:before
+{
+    opacity: 0;
+    transform: scale(4);
+}
+
+.rect-zoomin .checkbox:checked + .knobs:after
+{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.rect-zoomin .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+/* Rectangle Slide v2  */
+.rect-slide2 .knobs:before
+{
+    content: attr(data-yes);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03A9F4;
+    border-radius: 2px;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+}
+
+.rect-slide2 .checkbox:active + .knobs:before
+{
+    width: 46px;
+}
+
+.rect-slide2 .checkbox:checked:active + .knobs:before
+{
+    margin-left: -26px;
+}
+
+.rect-slide2 .checkbox:checked + .knobs:before
+{
+    content: attr(data-no)';
+    left: 42px;
+    background-color: #F44336;
+}
+
+.rect-slide2 .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+/* Rectangle Slide v3 */
+.rect-slide3 .knobs:before, .rect-slide3 .knobs span
+{
+    content: attr(data-yes)';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+}
+
+.rect-slide3 .knobs:before
+{
+    transition: 0.3s ease all, left 0.5s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    z-index: 2;
+}
+
+.rect-slide3 .knobs span
+{
+    background-color: #03A9F4;
+    border-radius: 2px;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    z-index: 1;
+}
+
+.rect-slide3 .checkbox:checked + .knobs:before
+{
+    content: attr(data-no)';
+    left: 42px;
+}
+
+.rect-slide3 .checkbox:checked + .knobs span
+{
+    left: 42px;
+    background-color: #F44336;
+}
+
+.rect-slide3 .checkbox:checked ~ .layer
+{
+    background-color: #fcebeb;
+}
+/* Rectangle Slide v4 */
+.rect-slide4 .knobs:before, .rect-slide4 .knobs span
+{
+    content: attr(data-yes)';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    background-color: #03A9F4;
+    border-radius: 2px;
+}
+
+.rect-slide4 .knobs:before
+{
+    top: 50%;
+    left: 8px;
+    width: 20px;
+    height: 10px;
+    margin-top: -5px;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.rect-slide4 .knobs span
+{
+    width: 20px;
+    height: 10px;
+    padding: 9px 4px;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    z-index: 1;
+}
+
+.rect-slide4 .checkbox:active + .knobs:before
+{
+    left: 10px;
+    width: 46px;
+    height: 4px;
+    color: transparent;
+    margin-top: -2px;
+    background-color: #0095d8;
+    transition: 0.3s ease all;
+    overflow: hidden;
+}
+
+.rect-slide4 .checkbox:active + .knobs span
+{
+    width: 58px;
+}
+
+.rect-slide4 .checkbox:checked:active + .knobs:before
+{
+    left: auto;
+    right: 10px;
+    background-color: #d80000;
+}
+
+.rect-slide4 .checkbox:checked:active + .knobs span
+{
+    margin-left: -38px;
+}
+
+.rect-slide4 .checkbox:checked + .knobs:before
+{
+    content: attr(data-no)';
+    left: 47px;
+}
+
+.rect-slide4 .checkbox:checked + .knobs span
+{
+    left: 42px;
+    background-color: #F44336;
+}
+
+.rect-slide4 .checkbox:checked ~ .layer
 {
     background-color: #fcebeb;
 }

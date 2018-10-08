@@ -20,6 +20,6 @@ rm css-toggle.*.js  styles.*.css *.map
 
 cp -R /tmp/css-toggle-component/* ./
 git add .
-git commit -m "Publishing docs for $(git log -1 --pretty=%B)"
+git commit -m "Publishing docs for $(git log --format="%H" -n 1)"
 git push origin gh-pages
 git checkout master

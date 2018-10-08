@@ -6,7 +6,7 @@
 # Pure CSS Toggle Web component
 Pure CSS Toggle Buttons - ON-OFF Switches
 
-- 11 different style effects to choose from
+- 16 different style effects to choose from
 - Keyboard Accessible (You can able to toggle using Space keys)
 - Screenreader discoverability
 
@@ -37,7 +37,13 @@ Pass on any one of the following values for different toggle effects to `theme` 
  - rect-slide
  - rect-flip
  - rect-move
- - rect-hide
+ - rect-hide    
+ - rect-updown
+ - rect-zoomin
+ - rect-slide2
+ - rect-slide3
+ - rect-slide4
+
 
 ## Things to do
 - Bring focus to the component when using Tab keys for navigation
