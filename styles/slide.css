@@ -1,0 +1,40 @@
+/* Slide */
+.slide .knobs:before
+{
+  content: attr(data-yes);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 10px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #03A9F4;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+.slide .checkbox:checked + .knobs:before
+{
+  content: attr(data-no);
+  left: 42px;
+  background-color: #f44336;
+}
+
+.slide .checkbox:checked ~ .layer
+{
+  background-color: #fcebeb;
+}
+
+.slide .knobs, 
+.slide .knobs:before, 
+.slide .layer
+{
+  transition: 0.3s ease all;
+}
+
+
